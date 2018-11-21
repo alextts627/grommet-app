@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Box, Button, Heading, Grommet } from 'grommet';
+import { Box, Button, Collapsible, Heading, Grommet } from 'grommet';
 import { hpe } from 'grommet-theme-hpe';
 import { Notification, Help, User } from 'grommet-icons';
 
@@ -42,8 +42,9 @@ class App extends Component {
             <Box flex align='center' justify='center'>
               app body
             </Box>
-            {showSidebar && (
+            <Collapsible direction="horizontal" open={showSidebar}>
               <Box
+                flex
                 width='medium'
                 background='light-2'
                 elevation='small'
@@ -52,7 +53,7 @@ class App extends Component {
               >
                 sidebar
               </Box>
-            )}
+            </Collapsible>
           </Box>
         </Box>
       </Grommet>
